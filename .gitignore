@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+
+/.venv
+
+/.cache
+/.config
+/.coverage
+/.eggs
+/.local
+/.npm
+/.tox
+/build
+/dist
+/*.egg-info
+htmlcov/
