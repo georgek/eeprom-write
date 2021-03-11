@@ -42,3 +42,8 @@ eepromino read
 ## Notes
 
 This has only been tested on Linux and with my Arduino Nano.
+
+You need this on your Arduino: <https://github.com/georgek/arduino>
+
+Ben Eater's video on how to make the EEPROM programmer on a breadboard:
+<https://www.youtube.com/watch?v=K88pgWhEb1M>
