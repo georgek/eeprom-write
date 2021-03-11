@@ -9,9 +9,9 @@ setup(
     url="https://github.com/georgek/eeprom-write",
     packages=find_packages(exclude=["tests"]),
     python_requires=">=3.8",
-    install_requires=["click>=7", "pyserial>=3"],
+    install_requires=["click>=7", "pyserial>=3", "hexdump"],
     extras_require={
         "testing": ["pytest"],
     },
-    entry_points={"console_scripts": ["eeprom-write = eeprom_write.cli:cli"]},
+    entry_points={"console_scripts": ["eepromio = eeprom_write.cli:cli"]},
 )
