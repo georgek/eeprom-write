@@ -16,7 +16,7 @@ setup(
     packages=find_packages(exclude=["tests"]),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    python_requires=">=3.8",
+    python_requires=">=3.6",
     install_requires=["click>=7", "pyserial>=3", "hexdump"],
     extras_require={"testing": ["pytest"]},
     entry_points={"console_scripts": ["eepromino = eepromino.cli:cli"]},
