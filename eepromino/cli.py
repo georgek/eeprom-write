@@ -1,6 +1,5 @@
 import click
 import serial
-
 from hexdump import hexdump
 
 READ_CMD_BYTE = b"\x3f"
@@ -41,9 +40,7 @@ def validate_hex_padding(ctx, params, value):
         if len(padding) != 1:
             raise click.BadParameter("Only one byte can be provided")
     except ValueError:
-        raise click.BadParameter(
-            "Please give padding in padded hex, e.g. '00'"
-        )
+        raise click.BadParameter("Please give padding in padded hex, e.g. '00'")
 
     return padding
 
