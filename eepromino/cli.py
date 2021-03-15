@@ -106,9 +106,8 @@ def write(ctx, data, pad_byte):
     elif data.read(1):
         important("Input truncated!")
     info("")
-    return
 
-    data_bytes += bytes(2048 - len(data_bytes))
+    data_bytes += pad_byte * (2048 - len(data_bytes))
 
     with serial.Serial(device, baud, timeout=1) as ser:
         initialise_arduino(ser, WRITE_CMD_BYTE)
