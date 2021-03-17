@@ -7,9 +7,47 @@ Unlike the original design you only have to program your Arduino once and then y
 read and write any data to the EEPROM via the serial interface. This is especially
 useful if you plan to build a 6502 computer and use your EEPROM to hold your programs.
 
+## Prerequisites
+
+### Hardware
+
+You first need to build your EEPROM programmer circuit on a breadboard.
+
+- Ben Eater's video: <https://www.youtube.com/watch?v=K88pgWhEb1M>
+- Schematic here: <https://github.com/beneater/eeprom-programmer>
+
+### Software
+
+- Python >= 3.6,
+- [pipx](https://github.com/pipxproject/pipx) (recommended),
+- [platformio](https://platformio.org/)
+
 ## Installation
 
-Recommended (using [pipx](https://github.com/pipxproject/pipx)):
+### Arduino
+
+The easiest way to program your Arduino is with platformio. No need for the Arduino IDE
+or manually install a toolchain.
+
+Install it with pipx:
+
+```sh
+pipx install platformio
+```
+
+Once installed, plug your Arduino in and do:
+
+```sh
+cd arduiono
+platformio run -e nano -t upload # for arduino nano
+platformio run -e uni -t upload # for arduino uno
+```
+
+### PC
+
+Install the Python utility on your PC to send data to the Arduino.
+
+Install it with pipx:
 
 ```sh
 pipx install eepromino
@@ -42,8 +80,3 @@ eepromino read
 ## Notes
 
 This has only been tested on Linux and with my Arduino Nano.
-
-You need this on your Arduino: <https://github.com/georgek/arduino>
-
-Ben Eater's video on how to make the EEPROM programmer on a breadboard:
-<https://www.youtube.com/watch?v=K88pgWhEb1M>
