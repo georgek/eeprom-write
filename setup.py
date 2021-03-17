@@ -14,6 +14,7 @@ setup(
     author_email="kettleg@gmail.com",
     url="https://github.com/georgek/eepromino",
     packages=find_packages(exclude=["tests"]),
+    description="Interface to Arudino EEPROM programmer",
     long_description=long_description,
     long_description_content_type="text/markdown",
     python_requires=">=3.6",
